@@ -1,18 +1,20 @@
-import './globals.css'
+import "./globals.css";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
-      <body>{children}</body>
+
+      <body
+        style={{ textAlign: "center", marginTop: "15%", marginBottom: "15%" }}
+      >
+        <h1 style={{ margin: "20px" }}>Awsome To Do List</h1>
+        {children}
+      </body>
     </html>
-  )
+  );
 }
